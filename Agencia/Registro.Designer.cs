@@ -156,6 +156,7 @@ namespace Agencia
             this.btnContrasena.TabIndex = 23;
             this.btnContrasena.Text = "Cambiar Contraseña";
             this.btnContrasena.UseVisualStyleBackColor = true;
+            this.btnContrasena.Click += new System.EventHandler(this.btnContrasena_Click);
             // 
             // btnNuevo
             // 

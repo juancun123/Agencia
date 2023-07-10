@@ -89,5 +89,18 @@ namespace Agencia
         {
             txtContrasena.Text = contrasena;
         }
+
+        private void btnContrasena_Click(object sender, EventArgs e)
+        {
+            string contrasenia = txtContrasena.Text;
+            if (contrasenia == null || contrasenia.Trim() == "")
+            {
+                MessageBox.Show(text: "Debe ingresar el campo contraseña", caption: "Error", MessageBoxButtons.OK, icon: MessageBoxIcon.Error);
+                return;
+            }
+             ((Agencia)this.Parent.Parent).ActualizarContra(contrasenia);
+              MessageBox.Show("Se ha actualizado la contraseña de manera exitosa");
+
+        }
     }
 }

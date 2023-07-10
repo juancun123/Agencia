@@ -59,6 +59,7 @@ namespace Agencia
             {
                 this.Width = this.Width - 300;
             }
+            
             if (fActive != null)
             {
                 Form active = formularios[fActive];
@@ -79,7 +80,10 @@ namespace Agencia
             {
                 ((Factura)form).limpiar();
             }
-
+            if(fActive == "login")
+            {
+                ((Login)form).limpiar();
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -249,6 +253,11 @@ namespace Agencia
             this.btnFactura.Visible = false;
             this.btnCerrarSesion.Visible = false;
             cambiarContenedor("login");
+        }
+
+        public void ActualizarContra(string contrasena)
+        {
+            this.usuario.ActualizarContra(contrasena);
         }
     }
 }

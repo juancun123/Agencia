@@ -16,6 +16,12 @@ namespace Agencia
             txtContrasena.PasswordChar = '*';
         }
 
+        public void limpiar()
+        {
+            this.txtUsuario.Text = "";
+            this.txtContrasena.Text = "";
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string usuario = txtUsuario.Text.Trim();
